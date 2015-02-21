@@ -1,0 +1,12 @@
+def Tables ( a, b, c ):
+	for x in range (b, c+1, 1):
+		y = x * a
+		print (x, "x", a, "=", y)
+
+
+
+a = int( input( "Enter the time table to print: " ))
+b = int( input( "Enter the starting value: " ))
+c = int( input( "Enter the ending value: " ))
+print ("Times table for:", a)
+Tables ( a, b, c )
