@@ -1,3 +1,5 @@
+#YESHUA JOEL AGUILAR JIMÉNEZ
+#A00569141
 x = int( input("Put a number:"))
 y = int( input("Put another number:"))
 z = x + y
