@@ -1,0 +1,14 @@
+def GCD(a,b):
+	if (a == b):
+		return (a)
+	elif (a > b):
+		y = GCD(a - b, b)
+		return (y)
+	elif (a < b):
+		y = GCD(a, b - a)
+		return (y)
+
+a = int(input("Put the first value:"))
+b = int(input("Put the second vañlue:"))
+x = GCD(a,b)
+print (x)
