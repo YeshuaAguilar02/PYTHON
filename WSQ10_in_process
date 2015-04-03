@@ -1,0 +1,38 @@
+import math
+def average(n):
+	x = 0
+	for i in n:
+		x = x + i
+		z = x // len(n)
+	return (z)
+def sums(n):
+	x = 0
+	for w in n:
+		x = x + w
+	return (x)
+def DS(n):
+	y = average(n)
+	for t in n:
+		d = ((t - y) ** 2 // len(n))
+	return (d)
+
+
+cont = "y"
+while ( cont == "y"):
+	a = float( input("Put the first value:"))
+	b = float( input("Put the second value:"))
+	c = float( input("Put the third value:"))
+	d = float( input("Put the fourth value:"))
+	e = float( input("Put the last value:"))
+	n = [a, b, c, d, e]
+	x = DS(n)
+	if (x >= 0):
+		r = math.sqrt(x)
+		y = average(n)
+		z = sums(n)
+		print ("The Desviation Standard is:", r)
+		print ("The Average is:", y)
+		print ("The Sum of all numbers is:", z)
+	else:
+		print ("No negative numbers, please")
+	cont = input("Wolud you like to continue?  (y/n)")
