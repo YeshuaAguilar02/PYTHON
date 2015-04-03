@@ -1,0 +1,23 @@
+# Fct recibe n y regresa n!
+def Fct(n):
+	if ((n == 0) or (n == 1)):
+		return n
+
+	respuesta = 1
+	y = n
+	while y > 0:
+		respuesta = respuesta * y
+		y = y - 1
+	return respuesta
+
+
+quiereSeguir = "y"
+while(quiereSeguir == "y"):
+	n = int( input("Put a factorial number please:"))
+	if(n >= 0):
+		x = Fct (n)
+		print(x)
+	else:
+		print ("No negative numbers, please")
+	quiereSeguir = input("quieres seguir ('y/n')")
+
