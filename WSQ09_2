@@ -1,0 +1,13 @@
+def Factorial (x):
+	if x == 0:
+		return 1
+	elif x == 1:
+		return 1
+	else:
+		return (x * Factorial(x-1))
+
+
+x = int(input("How big Factorial number do you want?: "))
+for y in range (0,x+1,1):
+	z = Factorial (y)
+	print ("Factorial of ", y ,"! is: ",z)
