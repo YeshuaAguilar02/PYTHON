@@ -1,0 +1,11 @@
+def Babilonia(n):
+	z = n
+	y = 0
+	while (z != y):
+		y = z
+		z = (n/z + z) // 2
+	return (z)
+
+n = float( input("Put a value:"))
+x = Babilonia(n)
+print (x)
