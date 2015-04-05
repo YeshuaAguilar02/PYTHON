@@ -1,0 +1,21 @@
+def Condition(x):
+	if x >= 70:
+		print ("Aprobado")
+		z = 85
+		if x >= z:
+				print ("Beca")
+		else:
+				print ("Sin Beca")
+	elif 40 <= x < 70:
+		print ("Reprobado")
+		z = 55
+		if x >= z:
+				print ("1ª advertencia")
+		else:
+				print ("2ª advertencia")
+	else:
+		print ("Expulsado")
+
+
+x = int(input("Put a value between 0 and 100:"))
+Condition (x)
