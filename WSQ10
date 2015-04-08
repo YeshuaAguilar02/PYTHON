@@ -5,20 +5,24 @@ def sums(n):
 		x = x + w
 	return (x)
 def average(n):
-	u = sums(n) // 5
+	u = sums(n) / len(n)
 	return (u)
 def DS(n):
 	y = average(n)
+	t = 0
+	d = 0
 	o = 0
-	for t in n:
-		d = (t - y) ** 2
+	while (t < len(n)):
+		d = ((n[t]) - y) ** 2
+		t = t + 1
 		o = o + d
-		r = math.sqrt(o // len(n))
+		r = math.sqrt(o / len(n))
 	return (r)
 
 n = []
 s = 0
-while (s < 5):
+print ("10 values maximum")
+while (s < 10):
 	a = float( input("Put a value:"))
 	n.append(a)
 	s = s + 1
