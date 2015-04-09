@@ -1,0 +1,42 @@
+def invert(low):
+	low = str(low)
+	low = low[: : -1]
+	low = int(low)
+	return (low)
+
+ranges = []
+lychrel = []
+
+low = int(input("Put the lowest bound:"))
+high = int(input("Put the highest bounder:"))
+print ("Range:", low, "to", high)
+
+for i in range(high - low + 1):
+	ranges.append(low)
+	low = low + 1
+
+palyndromes = 0
+nonlychrel = 0
+candidates = 0
+
+for x in ranges:
+	inverted = invert(x)
+	if x == inverted:
+		palyndromes = palyndromes + 1
+	else:
+		iteration_1 = inverted + x
+		iteration_2 = invert(iteration_1)
+		for y in range(30):
+			if iteration_1 == iteration_2:
+				nonlychrel = nonlychrel + 1
+				break
+			else:
+				iteration_1 = iteration_1 + iteration_2
+				iteration_2 = invert(iteration_1)
+			if (y == 29):
+				candidates = candidates + 1
+				lychrel.append(x)
+
+print ("Number of palyndromes:", palyndromes)
+print ("Number of Non-Lychrel numbers:", nonlychrel)
+print ("Number of Lychrel candidates:", candidates)
