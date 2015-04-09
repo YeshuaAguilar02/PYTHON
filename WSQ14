@@ -1,0 +1,11 @@
+import Fact
+def calculate_e(precision):
+	x = 0
+	y = 0
+	while (x <= precision):
+		y = y + 1 / (Fact.Fct(x))
+		x = x + 1
+	return (y)
+
+precision = int(input("Put the number of decimals to estimate the Euler constant:"))
+print(calculate_e(precision))
