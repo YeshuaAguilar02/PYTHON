@@ -1,0 +1,12 @@
+#YESHUA JOEL AGUILAR JIMÉNEZ
+#A00569141
+def superpower(a, b):
+	z = 1
+	for x in range(b):
+		z = z * a
+	return z
+
+a = int(input("Put a  value:"))
+b = int(input("PUt its exponent:"))
+l = superpower(a, b)
+print (l)
