@@ -1,0 +1,14 @@
+#YESHUA JOEL AGUILAR JIMÉNEZ
+#A00569141
+def Triangle(n):
+	z = ("T")
+	return (z)
+
+n = int(input("Put the size of the triangle:"))
+
+for x in range(1, n):
+	x = Triangle(n) * x
+	print (x)
+for x in range(n, 0, -1):
+	x = Triangle(n) * x
+	print (x)
