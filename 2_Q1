@@ -1,0 +1,15 @@
+#YESHUA JOEL AGUILAR JIMÉNEZ
+#A00569141
+import math
+def Distance(x_1, x_2, y_1, y_2):
+	a = x_2 - x_1
+	b = y_2 - y_1
+	c = math.sqrt((a ** 2) + (b ** 2))
+	return c
+
+x_2 = float(input("Put the x2 value:"))
+x_1 = float(input("Put the x1 value:"))
+y_2 = float(input("Put the y2 value:"))
+y_1 = float(input("Put the y1 value:"))
+x = Distance(x_1, x_2, y_1, y_2)
+print (x)
