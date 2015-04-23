@@ -1,0 +1,19 @@
+def findThrees(n):
+	m = []
+	for x in n:
+		if ((x % 3) == 0):
+			m.append(x)
+			y = 0
+			for s in m:
+				y += s
+	return (y)
+
+n = []
+z = 0
+while (z < 5):
+	a = int(input("Put a value:"))
+	n.append(a)
+	z += 1
+
+w = findThrees(n)
+print("The sum of valuables divisibles of 3 is:", w)
