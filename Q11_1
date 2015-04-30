@@ -1,0 +1,24 @@
+import math
+def readNumbersFromFile(x):
+	y = open(x, "r")
+	total = 0
+	l = []
+	a = 0
+	b = 0
+	c = 0
+	for line in y:
+		total = total + (int(line))
+		l.append(int(line))
+		value = len(l)
+		average = total / value
+		while (a < value):
+			b = ((l[a]) - average) ** 2
+			a = a + 1
+			c = c + b
+			standard_desviation = math.sqrt(c / value)
+	print("Number of values:", value)
+	print("Total of values:", total)
+	print("Average:", average)
+	print("Standard Desviation:", standard_desviation)
+
+readNumbersFromFile("random_numbers.txt")
