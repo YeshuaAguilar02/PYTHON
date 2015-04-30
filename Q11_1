@@ -1,22 +1,27 @@
 import math
+
 def readNumbersFromFile(x):
-	y = open(x, "r")
+	y = open(x)
 	total = 0
 	l = []
-	a = 0
-	b = 0
-	c = 0
+	numero_lineas = 0
+	average = 0
+	standard_desviation = 0
 	for line in y:
 		total = total + (int(line))
 		l.append(int(line))
-		value = len(l)
-		average = total / value
-		while (a < value):
-			b = ((l[a]) - average) ** 2
-			a = a + 1
-			c = c + b
-			standard_desviation = math.sqrt(c / value)
-	print("Number of values:", value)
+		numero_lineas = numero_lineas + 1
+	average = total / numero_lineas
+	t = 0
+	d = 0
+	o = 0
+	while (t < numero_lineas):
+		d = ((l[t]) - average) ** 2
+		t = t + 1
+		o = o + d
+	standard_desviation = math.sqrt(o / numero_lineas)
+	
+	print("Number of values:", numero_lineas)
 	print("Total of values:", total)
 	print("Average:", average)
 	print("Standard Desviation:", standard_desviation)
