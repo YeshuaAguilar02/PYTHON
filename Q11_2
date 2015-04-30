@@ -1,0 +1,13 @@
+def check_banana(n):
+	y = open(n, "r")
+	n = 0
+	for line in y:
+		string = line.lower()
+		word = string.find("banana")
+		while word != (-1):
+			n += 1
+			word = string.find("banana", (word + 1))
+	return (n)
+
+a = check_banana("bananas.txt")
+print("Number of 'banana' words found:", a)
