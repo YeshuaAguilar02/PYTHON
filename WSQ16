@@ -1,0 +1,25 @@
+def MPG(x):
+	count = 0
+	mp = 0.0
+	cp = 0.0
+	hp = 0.0
+	for line in x:
+		if (count % 2 == 0):
+			mdp = float(line[42:46])
+			mp = mp + mdp
+			ctp = float(line[52:54])
+			cp = cp + ctp
+			hgp = float(line[55:57])
+			hp = hp + hgp
+		count = count + 1
+		cars = count / 2
+		m = mp / cars
+		c = cp / cars
+		h = hp / cars
+	return (m, c, h)
+
+x = open("93cars.dat.txt")
+(m, c, h) = MPG(x)
+print("Average midrange price:", m)
+print("Average gas mileage in city:", c)
+print("Average gas mileage on highway:", h)
